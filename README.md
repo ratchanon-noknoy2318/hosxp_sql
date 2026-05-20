@@ -18,12 +18,26 @@
 # Example SQL
 
 ```sql
-SELECT 
+SELECT
+    p.hn,
+    p.cid,
+    p.pname,
+    p.fname,
+    p.lname,
+    p.sex,
+    CASE p.sex
+        WHEN 1 THEN 'ชาย'
+        WHEN 2 THEN 'หญิง'
+        ELSE 'ไม่ระบุ'
+    END AS sex_name,
     o.vstdate,
-    COUNT(DISTINCT o.hn) AS total_patients
-FROM ovst o
-GROUP BY o.vstdate
-ORDER BY o.vstdate;
+    o.dtx
+FROM patient p
+JOIN opdscreen o 
+    ON o.hn = p.hn
+   AND o.dtx IS NOT NULL
+   AND o.dtx <> ''
+WHERE p.death = 'N';
 ```
 
 ## Project Reference

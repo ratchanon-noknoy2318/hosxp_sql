@@ -31,3 +31,4 @@
 ## Reference
 
 - HOSxP: https://en.wikipedia.org/wiki/HOSxP
+- Linkdin  Case Study: [https://www.linkedin.com/posts/ratchanon-noknoy_healthcaredata-dataengineering-systemsthinking](https://www.linkedin.com/posts/ratchanon-noknoy_healthcaredata-dataengineering-systemsthinking-share-7456534276168282112-Bi0a/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF2Q4JEBP4yITEVbIn3E5Y8zTBxoVS6vqRA)

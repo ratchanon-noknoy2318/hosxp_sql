@@ -1,1 +1,1 @@
-HOSxP Data Export (version 3.66.11.00)
+Hospital Information System (HOSxP) version 3.66.11.00

@@ -1,1 +1,1 @@
-Hospital Information System (HOSxP) version 3.66.11.00
+HOSxP version 3.66.11.00

@@ -1,34 +1,34 @@
 # 🏥 Legacy Healthcare Reporting Performance Optimization
 
-In a **legacy healthcare reporting system** with limited documentation, a daily report running on a **1M+ record database** was taking more than **24 hours** to complete.
+## Problem
 
-## Problem Analysis
+- Daily report on **1M+ record database** took **24+ hours**
+- System built on legacy architecture with limited documentation
+- Performance issue persisted despite basic SQL tuning
 
-After tracing the full data flow, I discovered that the bottleneck was not the SQL query itself, but rather:
+## Root Cause
 
-- Redundant joins across multiple layers  
-- Repeated aggregations on the same datasets  
-- Duplicated processing logic in different system components  
-
-These inefficiencies compounded and significantly increased runtime.
+- Redundant joins across multiple data pipeline layers  
+- Repeated aggregations on identical datasets  
+- Duplicated processing logic across system components  
+- Inefficient data flow design (not query-level issue only)
 
 ## Solution
 
-I redesigned the data access and processing flow by:
-
-- Reducing unnecessary joins and consolidating data retrieval logic  
-- Moving shared aggregations into a single optimized layer  
-- Eliminating duplicated computations across services  
-- Streamlining the overall data pipeline architecture  
+- Refactored data access layer to reduce unnecessary joins  
+- Centralized aggregation logic into a single processing layer  
+- Removed duplicated computations across services  
+- Streamlined end-to-end data pipeline architecture  
 
 ## Result
 
-- Runtime reduced from **24+ hours → under 1 hour**
-- Significant improvement in system efficiency and stability
-- Reduced database load and resource contention
+- Runtime: **24+ hours → < 1 hour**
+- Reduced database load significantly  
+- Improved system stability under high data volume  
+- Lower resource contention across reporting jobs  
 
 ## Key Takeaway
 
-> Performance issues are often **system design problems**, not just **query problems**.
-
-Optimizing queries helps, but real gains come from rethinking how data flows through the entire system.
+- Performance bottlenecks are often **system design issues**, not only SQL issues  
+- Optimizing queries alone is insufficient in legacy systems  
+- Data flow architecture has higher impact than micro-optimizations

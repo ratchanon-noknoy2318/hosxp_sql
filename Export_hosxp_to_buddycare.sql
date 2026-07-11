@@ -1,7 +1,8 @@
 SELECT
-  case when p.sex = 1 then '003'
-       when p.sex = 2 then '004'
-   end as 'คำนำหน้า',
+  CASE 
+    WHEN p.sex = 1 THEN '003'
+    WHEN p.sex = 2 THEN '004'
+  END AS 'คำนำหน้า',
   p.fname AS "ชื่อ",
   p.lname AS "นามสกุล",
   p.sex AS "เพศ",
@@ -22,5 +23,5 @@ LEFT JOIN patient p3 ON p.patient_hn = p3.hn
 WHERE p.house_regist_type_id IN (1, 3) 
   AND v.village_moo <> 0 
   AND p.nationality = 99 
-  AND p.person_discharge_id = 9;
-  and p.birthdate is not null
+  AND p.person_discharge_id = 9
+  AND p.birthdate IS NOT NULL;

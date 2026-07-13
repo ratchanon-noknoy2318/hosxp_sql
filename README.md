@@ -9,4 +9,4 @@
 | pttype | A table of all insurance type names in Thailand. |
 | icd101 | A table of disease codes and medical diagnoses. |
 
-**Note:** The treatment rights (pttype) and diagnosis code (pdx) must be taken from vn_stat, *not from ovst*.
+**Note:** The treatment rights (pttype) and diagnosis code (pdx) must be taken from **vn_stat**, not from **ovst**.

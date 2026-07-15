@@ -6,12 +6,12 @@ SELECT
     nd.icode,
     nd.name AS service_name
 FROM ovst o
-LEFT JOIN opitemrece oi 
+    LEFT JOIN opitemrece oi
     ON o.vn = oi.vn
-LEFT JOIN nondrugitems nd 
+    LEFT JOIN nondrugitems nd
     ON oi.icode = nd.icode
-LEFT JOIN patient p 
+    LEFT JOIN patient p
     ON o.hn = p.hn
 WHERE oi.icode = '3003921'
-  AND o.vstdate BETWEEN '2025-01-01' AND '2025-06-16'
+    AND o.vstdate BETWEEN '2025-01-01' AND '2025-06-16'
 ORDER BY o.vstdate, o.vsttime;

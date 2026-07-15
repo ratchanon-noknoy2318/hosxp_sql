@@ -13,8 +13,8 @@ SELECT
     o.vstdate,
     o.dtx
 FROM patient p
-LEFT JOIN opdscreen o 
+    LEFT JOIN opdscreen o
     ON o.hn = p.hn
 WHERE p.death = 'N'
-  AND o.dtx IS NOT NULL
-  AND o.dtx <> '';
+    AND o.dtx IS NOT NULL
+    AND o.dtx <> '';

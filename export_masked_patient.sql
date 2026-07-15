@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     JSON_ARRAYAGG(
         JSON_OBJECT(
             'hashed_hn', SHA2(hn, 256), 
@@ -16,7 +16,7 @@ SELECT
     ) AS patient_json_data
 FROM patient
 WHERE 
-    (pname = 'นาย' AND sex != '1') 
+    (pname = 'นาย' AND sex != '1')
     OR (pname IN ('นาง', 'นางสาว') AND sex != '2')
     OR (pname IN ('ด.ช.', 'ด.ญ.') AND TIMESTAMPDIFF(YEAR, birthday, CURDATE()) >= 15)
 LIMIT 100;

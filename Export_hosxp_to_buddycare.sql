@@ -16,12 +16,12 @@ SELECT
   REGEXP_REPLACE(h.address, '[^0-9]', '') AS "บ้านเลขที่",
   h.road AS "ชื่อถนน"
 FROM person p
-LEFT JOIN pname p2 ON p.pname = p2.`name`
-LEFT JOIN house h ON p.house_id = h.house_id
-LEFT JOIN village v ON h.village_id = v.village_id
-LEFT JOIN patient p3 ON p.patient_hn = p3.hn
-WHERE p.house_regist_type_id IN (1, 3) 
-  AND v.village_moo <> 0 
-  AND p.nationality = 99 
+  LEFT JOIN pname p2 ON p.pname = p2.`name`
+  LEFT JOIN house h ON p.house_id = h.house_id
+  LEFT JOIN village v ON h.village_id = v.village_id
+  LEFT JOIN patient p3 ON p.patient_hn = p3.hn
+WHERE p.house_regist_type_id IN (1, 3)
+  AND v.village_moo <> 0
+  AND p.nationality = 99
   AND p.person_discharge_id = 9
   AND p.birthdate IS NOT NULL;
